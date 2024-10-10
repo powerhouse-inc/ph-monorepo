@@ -49,6 +49,7 @@ export default defineConfig(() => {
         output: {
           chunkFileNames: "[name].[hash].js",
           assetFileNames: (info) =>
+            // eslint-disable-next-line @typescript-eslint/no-deprecated
             info.name === "style.css" || info.names?.includes("style.css")
               ? "style.css"
               : "[name].[hash][extname]",
